@@ -4,6 +4,6 @@ import { Query, Resolver } from '@nestjs/graphql';
 export class ServerResolver {
     @Query(() => String)
     async hi(){
-        return 'wenas noches'
+        return 'All fine'
     }
 }
