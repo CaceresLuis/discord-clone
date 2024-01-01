@@ -18,7 +18,7 @@ model Profile {
 
   servers Server[]
   members Member[]
-  chanels Chanel[]
+  channels Chanel[]
 
   createAt DateTime @default(now())
   updateAt DateTime @updatedAt
@@ -33,7 +33,7 @@ model Server {
   profile    Profile @relation(fields: [profileId], references: [id], onDelete: Cascade)
 
   members Member[]
-  chanels Chanel[]
+  channels Chanel[]
 
   createAt DateTime @default(now())
   updateAt DateTime @updatedAt
