@@ -1,4 +1,5 @@
 import { Field, ObjectType } from '@nestjs/graphql';
+import { Member } from 'src/member/member.types';
 import { Channel, Server } from 'src/server/types';
 
 @ObjectType()
@@ -18,8 +19,8 @@ export class Profile {
   @Field({ nullable: true })
   imageUrl: string;
 
-//   @Field(() => [Member], { nullable: 'itemsAndList' })
-//   members: Member;
+  @Field(() => [Member], { nullable: 'itemsAndList' })
+  members: Member;
 
   @Field(() => [Channel], { nullable: 'itemsAndList' })
   channels: Channel;
