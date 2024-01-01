@@ -1,4 +1,5 @@
 import { Field, ObjectType, registerEnumType } from '@nestjs/graphql';
+import { Profile } from 'src/profile/profile.type';
 import { Server } from 'src/server/types';
 
 @ObjectType()
@@ -6,8 +7,8 @@ export class Member {
   @Field()
   id: number;
 
-  // @Field(() => Profile, {nullable: true})
-  // profile: Profile;
+  @Field(() => Profile, {nullable: true})
+  profile: Profile;
 
   @Field()
   profileId: number;
