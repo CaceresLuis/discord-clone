@@ -6,8 +6,6 @@ import { join } from 'path';
 import { GraphQLModule } from '@nestjs/graphql';
 import { ApolloDriver } from '@nestjs/apollo';
 import { ServerModule } from './server/server.module';
-import { ProfileResolver } from './profile/profile.resolver';
-import { ProfileModule } from './profile/profile.module';
 import { ProfileModule } from './profile/profile.module';
 
 @Module({
@@ -32,6 +30,6 @@ import { ProfileModule } from './profile/profile.module';
     ProfileModule,
   ],
   controllers: [AppController],
-  providers: [AppService, ProfileResolver],
+  providers: [AppService],
 })
 export class AppModule {}
